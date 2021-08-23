@@ -11,7 +11,7 @@ const push = document.getElementById('push');
 const saveList = (list) => {
   const taskList = JSON.stringify(list);
   localStorage.setItem('taskList', taskList);
-}
+};
 
 const tasks = document.getElementById('tasks');
 
@@ -83,7 +83,7 @@ const populateList = () => {
     saveList(taskList);
     populateList();
   };
-}
+};
 
 push.addEventListener('click', () => {
   addTask(taskList, input.value);
@@ -107,6 +107,6 @@ const loadList = () => {
     list.forEach((task) => addTask(taskList, task.description));
   }
   populateList();
-}
+};
 
 window.onload = loadList();
