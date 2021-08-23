@@ -8,7 +8,7 @@ let taskList = [];
 const input = document.getElementById('input');
 const push = document.getElementById('push');
 
-function saveList(list) {
+const saveList = (list) {
   const taskList = JSON.stringify(list);
   localStorage.setItem('taskList', taskList);
 }
