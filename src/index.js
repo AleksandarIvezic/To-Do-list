@@ -101,7 +101,7 @@ input.addEventListener('keypress', (e) => {
   }
 });
 
-function loadList() {
+const loadList = () => {
   if (localStorage.getItem('taskList')) {
     const list = JSON.parse(localStorage.getItem('taskList'));
     list.forEach((task) => addTask(taskList, task.description));
