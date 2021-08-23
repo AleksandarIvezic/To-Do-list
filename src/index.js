@@ -8,14 +8,14 @@ let taskList = [];
 const input = document.getElementById('input');
 const push = document.getElementById('push');
 
-const saveList = (list) {
+const saveList = (list) => {
   const taskList = JSON.stringify(list);
   localStorage.setItem('taskList', taskList);
 }
 
 const tasks = document.getElementById('tasks');
 
-function populateList() {
+const populateList = () => {
   tasks.innerHTML = '';
   taskList.forEach((task) => {
     const taskElement = document.createElement('li');
